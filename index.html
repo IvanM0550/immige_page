@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Иммидживая страница</title>
+    <link href="style.css" rel="stylesheet">
+    <style type="text/css">
+      #sec1{
+        height: 100vh;
+      }
+      #pic2{
+        width:65vw;
+        cursor: pointer;
+      }
+      .popup2{
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 15px;
+        background: #fff;
+        z-index: 99;
+        position: absolute;
+        display: none;
+      }
+      .popup2.active{
+        display: flex;
+      }
+      .cl{
+        cursor: pointer;
+      }
+      .cl:hover{
+        color: red;
+      }
+    </style>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script2.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#main">Главная <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#perehod_about_me">О себе</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class=nav-link href=#mywork>Примеры работ</a>
+          </li>
+          <li class="nav-item dropdown">
+          	<a class=nav-link href=#buysite>Заказать сайт</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+      </div>
+    </nav>
+    <section>
+      <div class="jumbotron text-center mt-2" id=sec1>
+        <div class="container">
+          <div class="row">
+            <div class="col-12" id=maintext>
+              <h1>Мельник Иван, Web-Разработчик</h1>
+              <p>Привет, это страница Web-Разработчика Ивана. Здесь ты узнаешь: работы которые я сделал, обо мне как Web-Дизайнер, а также узнать как заказать работу.</p>
+              <p><a class="btn btn-primary btn-lg" href="#perehod_about_me" role="button">Читать далее »</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <a class=perehod name=perehod_about_me>⠀</a><br><br>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1><a name=about_me>О себе</a></h1>
+            <p>Привет, меня зовут Иван и я занимаюсь Web-Разработкой сайта. Я хорошо владею: CSS, JavaScript, HTML, PhotoShop и CorelDraw. Могу запросто сделать любой многостраничный или лэндинговый сайт.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center"><br>
+          	<br>
+          	<br>
+          	<br>
+          	<br>
+            <h2><a name=mywork>Мои работы</a></h2>
+            <p>Здесь вы можете посмотреть мои последние работы.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 text-center">
+            <img class="img-fluid" src="./images/chrome_ZuZP9U1Rp4.png" alt="" id=pic1 onload="showpictures();">
+            <h4>Моя первая верстка сайта с использованием HTML и CSS</h4>
+          </div>
+          <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
+            <img class="img-fluid" src="images/inf_port.png" alt="" id="pic2" onload="scrip2();" onclick="open_popup2();">
+            <h4>Моя вторая верстка сайта с использованием HTML и CSS</h4>
+            <h6>Текст импровизирован</h6>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    <div class="popup2 flex-column justify-content-center">
+      <div class="close d-flex" style="text-align:right; width:100%"><span class="cl" onclick="close_popup2();">Close</div>
+      <div>
+        <img src="images/site2.png">
+      </div>
+    </div>
+    <hr>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1><a name=buysite>Понравилось и хотите заказать сайт?</a></h1>
+            <p>Скопируйте почту нажав на кнопку ниже и напишите мне.</p>
+            <button type="button" class="btn btn-success" onclick="showemail();">Заказать</button>
+          </div>
+        </div>
+        <div id=copypaste>
+        
+        <div class="text-center d-flex flex-row"><button class="btn btn-success" onclick="copy_email();" id="btn-text">Скопируйте</button><input type=text class="form-control text-center" readonly value="ivan.melnik.05@mail.ru" id=textforread></div>
+      </div>
+  	</div>
+    </section>
+    
+    <hr>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <h4 class="text-center">Как узнать цены на заказ сайта?</h4>
+            <p class=text-center>Все цены обговариваются по почте, которую вы можете узнать выше.</p>
+          </div>
+          <div class="col-md-4 col-12">
+            <h3 class="text-center">Мой адрес:</h3>
+            <address class="text-center">
+              <strong>г.Краснодар, ул. Базовская, д.254.</strong><br>
+              <abbr title="Phone">P:</abbr> +7(918) 072-84-06<br>
+              <div style="position:relative;overflow:hidden;">
+              	<a href="https://yandex.ru/maps/org/vysshaya_shkola_programmirovaniya/70752027269/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Высшая школа программирования</a>
+              	<a href="https://yandex.ru/maps/35/krasnodar/category/further_education/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Дополнительное образование в Краснодаре</a>
+              	<a href="https://yandex.ru/maps/35/krasnodar/category/computer_courses/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Компьютерные курсы в Краснодаре</a>
+              	<iframe src="https://yandex.ru/map-widget/v1/-/CCQlF-sulA" width="300" height="300" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+              </div>	
+            </address>
+          </div>
+          <div class="col-md-4 col-12">
+            <h3 class="text-center">Подписаться на новости</h3>
+            <form id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');">
+              <div class="form-group col-12">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите E-Mail">
+                <button type="submit" class="btn btn-dark mt-2" onclick="checkemail();">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <footer class="text-center bg-dark" id=footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Мельник Иван &copy </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+
+  </body>
+</html>
